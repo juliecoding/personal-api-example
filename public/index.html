@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller='mainCtrl'>
+    <button ng-click='getName()'>Name</button> {{name}} <br>
+    <button ng-click='getLocation()'>Location</button> {{location}} <br>
+    username: <input type="text" ng-model='username'> <br>
+    pin: <input type="password" ng-model='pin'> <br>
+    <button ng-click='getSecrets(username, pin)'>Secrets</button>
+    <ul>
+      <li ng-repeat='secret in secrets'>{{secret}}</li>
+    </ul>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js'></script>
+    <script src='./app.js'></script>
+    <script src='./mainCtrl.js'></script>
+    <script src='./mainService.js'></script>
+  </body>
+</html>
